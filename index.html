@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Graduation</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="./Music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <section class="envelopes">
+      <div class="size">
+      <div class="border">
+        <div class="borderin">
+          <div class="wrapper">
+            <div class="lid one"></div>
+            <div class="lid two"></div>
+            <div class="envelope"></div>
+            <div class="letter">
+              <p><img src="./love.svg" 
+                " alt=""></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+     
+      <a class="btns modalButton" data-popup="popupOne">
+        <div class="buttons">
+          <button class="blob-btn" >
+            CLICK HERE
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </button>
+          <br/>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+      </a>
+      
+    </section>
+    <section class="home" > <!-- Menyembunyikan section home -->
+    
+      <div class="text">
+        <div class="happy">
+          <img src="./text/1.png" alt="" class="fade-in">
+          <img src="./text/2.png" alt="" class="fade-in">
+          <img src="./text/3.png" alt="" class="fade-in">
+          <img src="./text/3.png" alt="" class="fade-in">
+          <img src="./text/4.png" alt="" class="fade-in">
+        </div>
+        <div class="graduation">
+          <img src="./text/5.png" alt="" class="fade-in">
+          <img src="./text/6.png" alt="" class="fade-in">
+          <img src="./text/2.png" alt="" class="fade-in">
+          <img src="./text/7.png" alt="" class="fade-in">
+          <img src="./text/8.png" alt="" class="fade-in">
+          <img src="./text/2.png" alt="" class="fade-in">
+          <img src="./text/9.png" alt="" class="fade-in">
+          <img src="./text/10.png" alt="" class="fade-in">
+          <img src="./text/11.png" alt="" class="fade-in">
+          <img src="./text/12.png" alt="" class="fade-in">
+        </div>
+      </div>
+      <div class="bouquet">
+        <img src="./boquet.PNG" alt=""  class="bouquet-animate">
+        
+      </div>
+      <style>
+       
+      </style>
+    </section>
+  
+  <section class="modal modalWindow" id="popupOne">  
+    <div class="bg-out">
+      <section class="top-pane">
+        <div class="bg">
+          <div class="modal-controls">
+            <div class="hearts">
+              ♥ ♥
+            </div>
+            <a class="minimizeBtn"><i class="fa-regular fa-window-maximize"></i></a>
+            <a class="maximizeBtn"><i class="fa-regular fa-window-minimize"></i></a>
+            <a class="closeBtn"><i class="fa-solid fa-xmark"></i></a>
+          </div>
+        </div>
+      </section>
+      <section class="modalWrapper">
+        <h2 class="fade-in-out">
+          <span></span></h2>
+      </section>
+    </div>
+    
+    <section class="bott-pane">
+        <a class="nextbtn btn-3d" href="#">NEXT</a>
+        <h2>OR</h2>
+        <a class="nextbtn btn-3d" href="./quitpage.html">NO</a>
+
+    </section>
+    
+   
+  </section>
+  <section class="modal overlay"></div>
+  
+   
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="./confetti.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.nextbtn').click(function(e) {
+          e.preventDefault(); // Mencegah aksi default link
+           $(".modal").fadeOut();
+           $(".envelopes").fadeOut(); // Menyembunyikan .envelopes
+           $(".home").css("display", "flex"); // Menampilkan .home dengan display flex
+            clearInterval(typingInterval); // Hentikan interval pengetikan saat modal ditutup
+            document.querySelector('.fade-in-out span').innerHTML = ""; 
+        });
+      });
+    </script>
+</body>
+</html>
