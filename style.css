@@ -397,7 +397,7 @@ section.modalWindow section.modalWrapper h2 span{
   margin: 10px;
 }
 
-a.nextbtn {
+a.nextbtn, a.nobtn {
   text-decoration:none;
   background-color: var(--old-rose);
   border-radius: 50px;
@@ -415,8 +415,10 @@ a.nextbtn {
   min-width: 200px;
   text-align: center;
 }
-a.nextbtn:hover,
-a.nextbtn:focus {
+a.nextbtn:hover ,
+a.nextbtn:focus,
+a.nobtn:hover, 
+a.nobtn:focus{
   -webkit-animation-name: wobble;
   animation-name: wobble;
   -webkit-animation-duration: 1s;
